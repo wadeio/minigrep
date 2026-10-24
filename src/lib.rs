@@ -28,7 +28,7 @@ pub enum ConfigBuildError {
     #[error("not enough arguments")]
     NotEnoughArgs,
 
-    #[error("IO Error, error: {}", .source.kind())]
+    #[error("IO Error, error: {}", .source)]
     IOError {
         #[from]
         source: io::Error,
